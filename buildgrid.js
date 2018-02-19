@@ -13,6 +13,18 @@ function buildgrid() {
 	.enter()
 	.append("div")
 	.text(function(d){return d3.select(this.parentNode).attr('row') + d;});
+    var modal = d3.select(".modal");
+    packs.on("click", function(d){
+	var pack = d3.select(this.parentNode).attr('row') + d;
+	var plot = modal.select("img.modal-content");
+	plot.attr("src", "I_d/"+pack+"-I_d.png");
+	modal.style("display", "block");
+    });
+
+    var close = d3.select(".close");
+    close.on("click", function(){
+	modal.style("display", "none");
+    });
 }
 
 buildgrid();
