@@ -16,12 +16,16 @@ body {
 }
 
 h1 {
-    color: rgba(0,0,0,0.6);
+    color: rgba(0,0,0,0.8);
     text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
 }
 
+.date {
+    color: #666;
+}
+
 .hint {
-    color: #3b3b46;
+    color: #3b553b;
 }
 
 .grid {
@@ -30,7 +34,7 @@ h1 {
     white-space: nowrap;
 }
 .row > div {
-    width: 40px;
+    width: 32px;
     height: 170px;
     line-height: 170px;
     text-align: center;
@@ -46,11 +50,12 @@ h1 {
 }
 
 .row .subpack {
-    width: 40px;
+    width: 32px;
     height: 85px;
     line-height: 85px;
     display: block;
     position: absolute;
+    font-size: 13px;
 }
 .row .subpack[sub="T"] {
     top: 0px;

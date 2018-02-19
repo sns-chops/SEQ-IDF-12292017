@@ -21,10 +21,15 @@ function buildgrid() {
 	var plot = modal.select("img.modal-content");
 	plot.attr("src", "I_d/"+pack+"-I_d.png");
 	modal.style("display", "block");
+	plot.on("click", function(){d3.event.stopPropagation();});
     });
 
     var close = d3.select(".close");
     close.on("click", function(){
+	modal.style("display", "none");
+    });
+
+    modal.on("click", function(){
 	modal.style("display", "none");
     });
 
