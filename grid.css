@@ -1,4 +1,9 @@
+body {
+    margin: 0px;
+}
+
 .grid {
+    margin: 10px;
     overflow-x: auto;
     white-space: nowrap;
 }
@@ -23,6 +28,7 @@
     position: fixed;
     z-index: 1;
     padding-top: 100px;
+    top: 0;
     left:0;
     right:0;
     width: 100%;
