@@ -11,11 +11,13 @@ function buildgrid() {
     var packs = rows.selectAll("div")
 	.data(packs)
 	.enter()
-	.append("div")
-	.text(function(d){return d3.select(this.parentNode).attr('row') + d;});
+	.append("div").attr('class', 'pack')
+	.attr('pack',function(d){return d3.select(this.parentNode).attr('row') + d;});  // pack=C21, ...
+    packs.text(function() {return d3.select(this).attr('pack');});
     var modal = d3.select(".modal");
     packs.on("click", function(d){
-	var pack = d3.select(this.parentNode).attr('row') + d;
+	var pack = d3.select(this).attr('pack');
+	if (pack=='C25' ||pack=='C26') return;
 	var plot = modal.select("img.modal-content");
 	plot.attr("src", "I_d/"+pack+"-I_d.png");
 	modal.style("display", "block");
@@ -25,6 +27,29 @@ function buildgrid() {
     close.on("click", function(){
 	modal.style("display", "none");
     });
+
+    build_subpacks(d3.select("div.pack[pack='C25']"));
+    build_subpacks(d3.select("div.pack[pack='C26']"));
 }
+
+function build_subpacks(container)
+{
+    container.text("...").classed("pack", false);
+    var pack = container.attr('pack');
+    var subs = ['T', 'B']
+    var subpacks = container.selectAll('div').data(subs).enter().append("div")
+	.attr("class", "subpack pack")
+	.attr("sub", function(d) {return d;})
+	.attr('pack', function(d) {return pack+d});
+    subpacks.text(function() {return d3.select(this).attr('pack');});
+    var modal = d3.select(".modal");
+    subpacks.on("click", function(d){
+	var pack = d3.select(this).attr('pack');
+	var plot = modal.select("img.modal-content");
+	plot.attr("src", "I_d/"+pack+"-I_d.png");
+	modal.style("display", "block");
+    });
+}
+    
 
 buildgrid();

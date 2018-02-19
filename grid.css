@@ -7,8 +7,8 @@ body {
     overflow-x: auto;
     white-space: nowrap;
 }
-.row div {
-    width: 35px;
+.row > div {
+    width: 40px;
     height: 170px;
     line-height: 170px;
     text-align: center;
@@ -16,10 +16,25 @@ body {
     background-color: #f0f0f0;
     margin: 2px;
     display: inline-block;
+    position: relative
 }
 
-.row div:hover {
+.row div.pack:hover {
     background-color: lightblue;
+}
+
+.row .subpack {
+    width: 40px;
+    height: 85px;
+    line-height: 85px;
+    display: block;
+    position: absolute;
+}
+.row .subpack[sub="T"] {
+    top: 0px;
+}
+.row .subpack[sub="B"] {
+    bottom: 0px;
 }
 
 /* modal widget */
