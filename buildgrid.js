@@ -1,15 +1,18 @@
 function buildgrid() {
+    var rows = ["D", "C", "B"];
     var packs = [];
-    for (var i=0; i<5; i++) {
-	packs.push('D'+i);
+    for (var i=1; i<37+1; i++) {
+	packs.push(i);
     }
-    d3.select(".grid")
-	.selectAll("div")
+    var grid = d3.select("body").append("div").attr('class', 'grid');
+    var rows = grid.selectAll("div").data(rows)
+	.enter()
+	.append("div").attr('class', 'row').attr('row', function(d){return d;});
+    var packs = rows.selectAll("div")
 	.data(packs)
 	.enter()
 	.append("div")
-	.text(function(d){return d;})
-    ;
+	.text(function(d){return d3.select(this.parentNode).attr('row') + d;});
 }
 
 buildgrid();
