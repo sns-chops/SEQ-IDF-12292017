@@ -28,6 +28,13 @@ h1 {
     color: #3b553b;
 }
 
+div.banner {
+}
+
+div.banner > img{
+    margin: 5px;
+}
+
 p {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
