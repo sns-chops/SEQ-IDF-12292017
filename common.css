@@ -30,9 +30,24 @@ h1 {
 
 div.banner {
 }
-
-div.banner > img{
+div.figure{
+    display: inline-block;
+    background-color: white;
+    margin: 1px 3px;
+    padding: 5px 7px;
+    border: 2px solid lightgray;
+}
+div.figure img{
+    display: block;
+    margin: auto;
+}
+div.figure hr{
+    border-top: 1px solid lightgray;
+}
+div.figure p{
+    font-family: Georgia, Times New Roman, serif;
     margin: 5px;
+    text-align: center;
 }
 
 p {
