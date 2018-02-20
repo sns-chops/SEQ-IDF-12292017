@@ -1,48 +1,21 @@
-body {
-    margin: 0px;
-
-    padding: 5px 10px;
-
-    /* metallic BG */
-    background: -webkit-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
-    background: -moz-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
-    background: -ms-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
-    background: -o-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
-    background: radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
-    background-size: 100% 100%, 10px 10px, 10px 10px, 100% 100%;
-    background-position: top center, 1px 1px, 0px 0px, top center;
-
-    bottom: 0;
-}
-
-h1 {
-    color: rgba(0,0,0,0.8);
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
-}
-
-.date {
-    color: #666;
-}
-
-.hint {
-    color: #3b553b;
-}
-
 .grid {
     margin: 10px;
     overflow-x: auto;
     white-space: nowrap;
 }
 .row > div {
-    width: 32px;
+    width: 30px;
     height: 170px;
     line-height: 170px;
     text-align: center;
-    border: 1px outset lightgrey;
-    background-color: #f0f0f0;
-    margin: 2px;
+    border: 2px outset #999;
+    background-color: #707070;
+    color: #f2f1f0;
+    margin: 1px;
     display: inline-block;
     position: relative;
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 .row div.pack:hover {
@@ -50,7 +23,7 @@ h1 {
 }
 
 .row .subpack {
-    width: 32px;
+    width: 30px;
     height: 85px;
     line-height: 85px;
     display: block;
